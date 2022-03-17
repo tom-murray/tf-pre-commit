@@ -17,3 +17,12 @@
   files: \.tf$
   exclude: \.+.terraform\/.*$
   require_serial: true
+
+- id: checkov
+  name: Checkov
+  description: Scans terraform configuration for security vulnerabilities
+  entry: hooks/checkov.sh
+  language: script
+  files: \.tf$
+  exclude: \.+.terraform\/.*$
+  require_serial: true
