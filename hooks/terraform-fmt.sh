@@ -7,9 +7,7 @@ export PATH=$PATH:/usr/local/bin
 
 FMT_ERROR=0
 
-for file in "$@"; do
-  terraform fmt -diff "$file" || FMT_ERROR=$?
-done
+terraform fmt -recursive || FMT_ERROR=$?
 
 export PATH=$original_path
 
